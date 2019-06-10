@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2A77CFA122A505A2002701FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77CFA022A505A2002701FF /* AppDelegate.swift */; };
-		2A77CFA322A505A2002701FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77CFA222A505A2002701FF /* ViewController.swift */; };
 		2A77CFA622A505A2002701FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A77CFA422A505A2002701FF /* Main.storyboard */; };
 		2A77CFA822A505A2002701FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A77CFA722A505A2002701FF /* Assets.xcassets */; };
 		2A77CFAB22A505A2002701FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A77CFA922A505A2002701FF /* LaunchScreen.storyboard */; };
+		2AB1F50C22AA52F0009758B2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1F50B22AA52F0009758B2 /* MapViewController.swift */; };
+		2AB1F50E22AA5F98009758B2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1F50D22AA5F98009758B2 /* MenuViewController.swift */; };
+		2AB1F51022AA64F7009758B2 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB1F50F22AA64F7009758B2 /* WeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A77CF9D22A505A2002701FF /* PirateHandBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PirateHandBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A77CFA022A505A2002701FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2A77CFA222A505A2002701FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A77CFA522A505A2002701FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A77CFA722A505A2002701FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A77CFAA22A505A2002701FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A77CFAC22A505A2002701FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AB1F50B22AA52F0009758B2 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2AB1F50D22AA5F98009758B2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2AB1F50F22AA64F7009758B2 /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				2A77CFA022A505A2002701FF /* AppDelegate.swift */,
-				2A77CFA222A505A2002701FF /* ViewController.swift */,
+				2AB1F50B22AA52F0009758B2 /* MapViewController.swift */,
+				2AB1F50F22AA64F7009758B2 /* WeatherViewController.swift */,
+				2AB1F50D22AA5F98009758B2 /* MenuViewController.swift */,
 				2A77CFA422A505A2002701FF /* Main.storyboard */,
 				2A77CFA722A505A2002701FF /* Assets.xcassets */,
 				2A77CFA922A505A2002701FF /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A77CFA322A505A2002701FF /* ViewController.swift in Sources */,
 				2A77CFA122A505A2002701FF /* AppDelegate.swift in Sources */,
+				2AB1F51022AA64F7009758B2 /* WeatherViewController.swift in Sources */,
+				2AB1F50E22AA5F98009758B2 /* MenuViewController.swift in Sources */,
+				2AB1F50C22AA52F0009758B2 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +298,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myosetpaing.PirateHandBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -307,7 +315,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.myosetpaing.PirateHandBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
