@@ -18,12 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JRn-yt-SAT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JRn-yt-SAT" userLabel="backgroundImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p8F-Ru-5LJ">
-                                <rect key="frame" x="20" y="323" width="335" height="166"/>
+                                <rect key="frame" x="20" y="292" width="335" height="228"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5K-ns-W2A">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -51,10 +51,10 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="175-Gv-T4X">
-                                        <rect key="frame" x="0.0" y="116" width="335" height="50"/>
+                                        <rect key="frame" x="0.0" y="116" width="335" height="112"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tM4-Wh-vQe">
-                                                <rect key="frame" x="0.0" y="0.0" width="161.66666666666666" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                                                 <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                                 <state key="normal" title="Privacy Policy" backgroundImage="button">
@@ -62,7 +62,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIF-aF-BAa">
-                                                <rect key="frame" x="173.66666666666663" y="0.0" width="161.33333333333337" height="50"/>
+                                                <rect key="frame" x="0.0" y="62" width="335" height="50"/>
                                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
                                                 <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                                 <state key="normal" title="FAQs" backgroundImage="button">
@@ -70,6 +70,7 @@
                                                 </state>
                                             </button>
                                         </subviews>
+                                        <variation key="widthClass=compact" axis="vertical"/>
                                     </stackView>
                                 </subviews>
                                 <constraints>
@@ -97,13 +98,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="R0f-0J-HTS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="JLl-EH-c5o"/>
+                    <navigationItem key="navigationItem" id="JLl-EH-c5o">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="dictionary" id="yXe-he-8e6">
+                            <connections>
+                                <segue destination="cjj-9n-gby" kind="popoverPresentation" popoverAnchorBarButtonItem="yXe-he-8e6" id="1SH-uo-ury">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXh-TA-sb7" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="235" y="28"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Treasure map-->
         <scene sceneID="J1R-a8-GkO">
             <objects>
                 <viewController id="oZf-s1-JJq" customClass="MapViewController" customModule="PirateHandBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,6 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0ZQ-da-m2N"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Treasure map" id="SAi-0G-mEf"/>
                     <connections>
                         <outlet property="desiredXConstraint" destination="u8R-Nl-lkb" id="O9Z-wO-UMQ"/>
                         <outlet property="desiredYConstraint" destination="fs0-eJ-CDn" id="a7p-MP-BbT"/>
@@ -188,7 +198,7 @@
             </objects>
             <point key="canvasLocation" x="-823" y="28"/>
         </scene>
-        <!--Weather View Controller-->
+        <!--Caribbean Weather Forecast-->
         <scene sceneID="rUO-F5-gqS">
             <objects>
                 <viewController id="fNP-9d-y41" customClass="WeatherViewController" customModule="PirateHandBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -200,37 +210,173 @@
                                 <rect key="frame" x="0.0" y="-554" width="1366" height="1366"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ags-Y7-Xnl">
-                                <rect key="frame" x="16" y="351" width="343" height="110"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" placeholder="YES" id="BBg-2a-KOM"/>
-                                    <constraint firstAttribute="height" constant="110" placeholder="YES" id="ziX-1k-5AD"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="ags-Y7-Xnl" secondAttribute="trailing" id="Olj-Ve-I0M"/>
-                            <constraint firstItem="ags-Y7-Xnl" firstAttribute="centerX" secondItem="WTQ-pe-1Oe" secondAttribute="centerX" id="UMl-Nk-rPA"/>
-                            <constraint firstItem="ags-Y7-Xnl" firstAttribute="centerY" secondItem="53Z-m3-Rsb" secondAttribute="centerY" id="Vpb-jv-dmO"/>
-                            <constraint firstItem="ags-Y7-Xnl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="53Z-m3-Rsb" secondAttribute="leadingMargin" id="xCg-PD-iYA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WTQ-pe-1Oe"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Caribbean Weather Forecast" id="eGm-jr-qpV"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <connections>
-                        <outlet property="stackView" destination="ags-Y7-Xnl" id="N1t-rT-KtC"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcd-iA-YtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="498"/>
+            <point key="canvasLocation" x="1628" y="374"/>
+        </scene>
+        <!--Dictionary View Controller-->
+        <scene sceneID="YVf-Yq-0CN">
+            <objects>
+                <tableViewController id="cjj-9n-gby" customClass="DictionaryViewController" customModule="PirateHandbook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="YAQ-pf-M4e">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="qvG-Ba-930">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="oHN-TO-dfQ" detailTextLabel="ZKC-3h-9ik" style="IBUITableViewCellStyleValue1" id="phz-vf-Nbk">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="phz-vf-Nbk" id="JK8-vb-vVV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Text Speak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oHN-TO-dfQ">
+                                                    <rect key="frame" x="16" y="9" width="95.666666666666671" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Pirate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZKC-3h-9ik">
+                                                    <rect key="frame" x="306.33333333333331" y="9" width="52.666666666666664" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="tEo-M9-9ea" detailTextLabel="bBR-yS-OMb" style="IBUITableViewCellStyleValue1" id="TTI-6Y-cmg">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TTI-6Y-cmg" id="iHS-qO-zFw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="LOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tEo-M9-9ea">
+                                                    <rect key="frame" x="16" y="13.000000000000002" width="23.666666666666668" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Yo ho ho" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bBR-yS-OMb">
+                                                    <rect key="frame" x="301.66666666666669" y="13.000000000000002" width="57.333333333333336" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="uEu-IV-8xB" detailTextLabel="sjB-jZ-ppZ" style="IBUITableViewCellStyleValue1" id="Do0-sz-KMW">
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Do0-sz-KMW" id="NCT-DF-kWU">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="ROFL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uEu-IV-8xB">
+                                                    <rect key="frame" x="16" y="13.000000000000002" width="34" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Yo ho ho and a bottle of rum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sjB-jZ-ppZ">
+                                                    <rect key="frame" x="162" y="13.000000000000002" width="197" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="qa4-0M-Uh7" detailTextLabel="ejV-oa-w5p" style="IBUITableViewCellStyleValue1" id="FBO-TA-5Jq">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FBO-TA-5Jq" id="Y56-zX-RVY">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="WYD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qa4-0M-Uh7">
+                                                    <rect key="frame" x="15.999999999999996" y="13.000000000000002" width="35.666666666666664" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Ahoy" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ejV-oa-w5p">
+                                                    <rect key="frame" x="322.66666666666669" y="13.000000000000002" width="36.333333333333336" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="kIW-fM-cQX" detailTextLabel="H5J-xW-1gI" style="IBUITableViewCellStyleValue1" id="NHC-ae-bCW">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NHC-ae-bCW" id="oVj-sG-wKL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="WTF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kIW-fM-cQX">
+                                                    <rect key="frame" x="16" y="13.000000000000002" width="31.666666666666668" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Shiver me timbers" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H5J-xW-1gI">
+                                                    <rect key="frame" x="232.33333333333329" y="13.000000000000002" width="126.66666666666667" height="18.666666666666668"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="cjj-9n-gby" id="VN9-P2-Kby"/>
+                            <outlet property="delegate" destination="cjj-9n-gby" id="dyA-lC-gfq"/>
+                        </connections>
+                    </tableView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="atv-ou-0Sq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="786"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow" width="67" height="67"/>
         <image name="background" width="1366" height="1366"/>
         <image name="button" width="41" height="39.333332061767578"/>
+        <image name="dictionary" width="37" height="25"/>
         <image name="map" width="2500" height="2500"/>
     </resources>
 </document>

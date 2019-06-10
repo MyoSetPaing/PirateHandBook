@@ -10,9 +10,9 @@
         },
         "cap-insets" : {
           "bottom" : 21,
-          "top" : 17,
-          "right" : 16,
-          "left" : 13
+          "top" : 19,
+          "right" : 27,
+          "left" : 16
         }
       },
       "idiom" : "universal",
@@ -30,7 +30,7 @@
         "cap-insets" : {
           "bottom" : 43,
           "top" : 38,
-          "right" : 42,
+          "right" : 55,
           "left" : 34
         }
       },
@@ -48,9 +48,9 @@
         },
         "cap-insets" : {
           "bottom" : 63,
-          "top" : 54,
-          "right" : 85,
-          "left" : 37
+          "top" : 56,
+          "right" : 83,
+          "left" : 50
         }
       },
       "idiom" : "universal",
